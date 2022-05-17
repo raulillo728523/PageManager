@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Login Controller
+    |  Controller
     |--------------------------------------------------------------------------
     |
     | This controller handles authenticating users for the application and
@@ -22,7 +22,7 @@ class LoginController extends Controller
     use AuthenticatesUsers;
 
     /**
-     * Where to redirect users after login.
+     * Where to redirect users after .
      *
      * @var string
      */
@@ -41,5 +41,10 @@ class LoginController extends Controller
     public function username()
     {
         return 'username';
+    }
+
+    public function index()
+    {
+        return view('auth.login');
     }
 }

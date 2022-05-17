@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicacionesController;
 use App\Http\Controllers\PDFController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,7 @@ use App\Http\Controllers\PDFController;
 
 Route::get('/', [PublicacionesController::class, 'cargar'])->name('dashboard');
 Route::get('/dash', [PublicacionesController::class, 'getMostrarUsers'])->name('dash');
+
 
 Auth::routes();
 
