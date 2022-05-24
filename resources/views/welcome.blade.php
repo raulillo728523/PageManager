@@ -94,14 +94,14 @@
           <div class="card mb-30">
             <div class="row align-items-center h-full">
               <div class="col-12 col-md-4">
-                <a href="blog-single.html"><img src="{{asset('resources/assets/img/blog-1.jpg')}}" alt="..."></a>
+                <a><img src="{{asset('resources/assets/img/blog-1.jpg')}}" alt="..."></a>
               </div>
 
               <div class="col-12 col-md-8">
                 <div class="card-block">
-                  <h4 class="card-title">New features will add to dashboard soon</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
-                  <a class="fw-600 fs-12" href="blog-single.html">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
+                  <h4 class="card-title">Naturiza</h4>
+                  <p class="card-text">Un espacio al aire libre con todos los accesorios disponibles para que puedas hacer todo el ejercicio que tu quieras a tu comodidad.</p>
+                  <a class="fw-600 fs-12" href="#">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
                 </div>
               </div>
             </div>
@@ -111,14 +111,14 @@
           <div class="card mb-30">
             <div class="row align-items-center h-full">
               <div class="col-12 col-md-4">
-                <a href="blog-single.html"><img src="{{asset('resources/assets/img/blog-2.jpg')}}" alt="..."></a>
+                <a><img src="{{asset('resources/assets/img/blog-2.jpg')}}" alt="..."></a>
               </div>
 
               <div class="col-12 col-md-8">
                 <div class="card-block">
-                  <h4 class="card-title">Download our Chrome extension</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
-                  <a class="fw-600 fs-12" href="blog-single.html">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
+                  <h4 class="card-title">Playa Azul</h4>
+                  <p class="card-text">Playa Michoacana que te ofrece la mejor comida y estancia.</p>
+                  <a class="fw-600 fs-12" href="#">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
                 </div>
               </div>
             </div>

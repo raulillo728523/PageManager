@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicacionesController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\Auth\RegisterController;
 
 
 /*
@@ -17,8 +18,9 @@ use App\Http\Controllers\PDFController;
 */
 
 Route::get('/', [PublicacionesController::class, 'cargar'])->name('dashboard');
+Route::get('/template', [PublicacionesController::class, 'template'])->name('template');
 Route::get('/dash', [PublicacionesController::class, 'getMostrarUsers'])->name('dash');
-
+Route::post('/regitrar', [RegisterController::class, 'create'])->name('create');
 
 Auth::routes();
 

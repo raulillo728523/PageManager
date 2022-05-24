@@ -30,4 +30,8 @@ class PublicacionesController extends Controller
         $registros = Publicaciones::all();
         return response()->json($registros, 200);
     }
+
+    public function template(Request $request){
+        return view('auth/template');      
+    }
 }

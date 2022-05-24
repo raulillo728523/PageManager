@@ -17,7 +17,7 @@
     <link rel="icon" href="{{asset('resources/assets/img/tofly2.png')}}">
   </head>
 
-  <body class="mh-fullscreen bg-img center-vh p-20" style="background-image: url({{asset('resources/assets/img/bg-girl.jpg')}});">
+  <body class="mh-fullscreen bg-img center-vh p-20" style="background-image: url({{asset('resources/assets/img/fondologin.jpg')}});">
 
 
 
@@ -54,15 +54,12 @@
       </form>
       <form action="{{ route('register') }}">
         <div class="form-group">
-            <button class="btn btn-bold btn-block btn-primary" type="submit">{{ __('Register') }}</button>
+            <button class="btn btn-bold btn-block btn-primary" type="submit">{{ __('Registrar') }}</button>
             </div>
       </form>
       
 
     </div>
-
-
-
 
     <!-- Scripts -->
     <script src="assets/js/core.min.js"></script>
