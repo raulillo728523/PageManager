@@ -20,6 +20,19 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('rol');
             $table->string('password');
+            $table->string('city')->nullable();
+            $table->string('address')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('description')->nullable();
+            $table->string('service1')->nullable();
+            $table->string('service2')->nullable();
+            $table->string('service3')->nullable();
+            $table->string('service4')->nullable();
+            $table->string('service5')->nullable();
+            $table->string('service6')->nullable();
+            $table->string('history')->nullable();
+            $table->string('img')->nullable();
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }

@@ -32,23 +32,23 @@
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-user" role="tabpanel" aria-labelledby="pills-home-tab">
-          <form method="POST" action="{{ route('create') }}">
+          <form method="POST" action="{{ route('agregarusuario') }}">
           @csrf
 
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username">
+              <input type="text" id="username" name="username" class="form-control" placeholder="Username">
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Nombre completo">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Nombre completo">
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Email address">
+              <input type="text" id="email" name="email" class="form-control" placeholder="Email address">
             </div>
 
             <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password">
+              <input type="password" id="password" name="password" class="form-control" placeholder="Password">
             </div>
 
             <div class="form-group">
@@ -60,66 +60,80 @@
           </form>
         </div>
         <div class="tab-pane fade" id="pills-client" role="tabpanel" aria-labelledby="pills-profile-tab">
-          <form method="POST" action="{{ route('create') }}">
+          <form method="POST" action="{{ route('agregarcliente') }}">
             @csrf
 
-              <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
-                <input type="text"  class="form-control" style="width: 233px;" placeholder="Usuario">
-                &nbsp;
-                &nbsp;
-                <input type="text"  class="form-control" style="width: 233px;" placeholder="Email">
-                &nbsp;
-                &nbsp;
-                <input type="text"  class="form-control" style="width: 209px;" placeholder="Ciudad">
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Nombre de la Empresa"></input>
               </div>
 
               <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
-                <input type="text"  class="form-control" style="width: 479px;" placeholder="Direccion">
+                <input type="text" id="username" name="username" class="form-control" style="width: 233px;" placeholder="Usuario">
                 &nbsp;
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 210px;" placeholder="Numero de contacto">
+                <input type="text" id="email" name="email" class="form-control" style="width: 233px;" placeholder="Email">
+                &nbsp;
+                &nbsp;
+                <input type="text" id="city" name="city" class="form-control" style="width: 209px;" placeholder="Ciudad">
+              </div>
+
+              <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
+                <input type="text"  id="address" name="address" class="form-control" style="width: 479px;" placeholder="Direccion">
+                &nbsp;
+                &nbsp;
+                <input type="text"  id="telephone" name="telephone" class="form-control" style="width: 210px;" placeholder="Numero Telefonico">
               </div>
 
               <div class="form-group">
-                <textarea type="text" style="height: 120px; width: 700px;" class="form-control" placeholder="Descripcion de la empresa"></textarea>
+                <textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control" placeholder="Descripcion de la empresa"></textarea>
               </div>
 
               <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
-                <input type="text"  class="form-control" style="width: 225px;" placeholder="Caracteristica 1">
+                <input type="text" id="service1" name="service1" class="form-control" style="width: 225px;" placeholder="Servicio 1">
                 &nbsp;
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 226px;" placeholder="Caracteristica 2">
+                <input type="text"  id="service2" name="service2" class="form-control" style="width: 226px;" placeholder="Servicio 2">
                 &nbsp;
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 225px;" placeholder="Caracteristica 3">
+                <input type="text"  id="service3" name="service3" class="form-control" style="width: 225px;" placeholder="Servicio 3">
               </div>
 
               <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
-                <input type="text"  class="form-control" style="width: 225px;" placeholder="Caracteristica 4">
+                <input type="text"  id="service4" name="service4" class="form-control" style="width: 225px;" placeholder="Servicio 4">
                 &nbsp;
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 226px;" placeholder="Caracteristica 5">
+                <input type="text"  id="service5" name="service5" class="form-control" style="width: 226px;" placeholder="Servicio 5">
                 &nbsp;
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 225px;" placeholder="Caracteristica 6">
+                <input type="text"  id="service6" name="service6" class="form-control" style="width: 225px;" placeholder="Servicio 6">
               </div>
 
               <div class="form-group">
-                <textarea type="text" style="height: 120px; width: 700px;" class="form-control" placeholder="Historia de la empresa"></textarea>
+                <textarea type="text" id="history" name="history"style="height: 120px; width: 700px;" class="form-control" placeholder="Historia de la empresa"></textarea>
               </div>
 
-           
+              <div class="input-group mb-3">
+                <select class="custom-select" style="width: 500px;" id="inputGroupSelect02">
+                  <option selected>Elegir...</option>
+                  <option value="1">Hoteleria</option>
+                  <option value="2">Restaurantes</option>
+                  <option value="3">Consensionaria</option>
+                </select>
+                <div class="input-group-append">
+                  <label class="input-group-text" for="inputGroupSelect02">Tipo de empresa</label>
+                </div>
+              </div>
+
               <div class="form-group">
                 <label for="exampleFormControlFile1">Subir logo (.png ó .jpg)
                 </label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <input type="file" id="image" name="image" class="form-control-file" id="exampleFormControlFile1">
               </div>
-              
 
               <div class="form-group row d-flex flex-row justify-content-center alig-items-center">
-                <input type="text"  class="form-control" style="width: 223px;" placeholder="Contraseña">
+                <input type="password"  id="password" name="password" class="form-control" style="width: 223px;" placeholder="Contraseña">
                 &nbsp;
-                <input type="text"  class="form-control" style="width: 223px;" placeholder="Confirmar contraseña">
+                <input type="password"  class="form-control" style="width: 223px;" placeholder="Confirmar contraseña">
               </div>
 
               <br>

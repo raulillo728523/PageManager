@@ -175,3 +175,15 @@
 
   </body>
 </html>
+
+
+<!-- public function run()
+    {
+        User::create([
+            'name'      =>  'Marco Raúl Espino Contreras',
+            'username'  =>  'Raul',
+            'email' => 'rulo_espino@hotmail.com',
+            'rol'       =>  'administrador',
+            'password'  =>  Hash::make('123456')
+        ]);
+    } -->

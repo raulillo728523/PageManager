@@ -32,6 +32,17 @@
           </a>
         </div>
 
+        <div class="topbar-right">
+          <ul class="topbar-nav nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Cerrar</a></li><li class="nav-item"><a class="nav-link" href="javascript:void();" type="submit" onclick="document.getElementById('my_form').submit();">Cerrar Sesion</a></li>
+            <form method="POST" action="{{ route('logout') }}" id="my_form">
+                @csrf
+                <!-- <button type="submit" class="nav-item"
+                    role="button">Cerrar Sesión</button> -->
+            </form>
+          </ul>
+        </div> 
+
       </div>
     </nav>
     <!-- END Topbar -->
