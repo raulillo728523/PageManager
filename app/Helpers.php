@@ -16,3 +16,8 @@ function rol($rol){
 
     return false;
 }
+
+function rolname(){
+    
+    return Auth::user()->id;
+}

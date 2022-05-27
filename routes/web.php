@@ -19,6 +19,7 @@ use App\Http\Controllers\RegisterUserController;
 */
 
 Route::get('/', [PublicacionesController::class, 'cargar'])->name('dashboard');
+Route::get('/home', [PublicacionesController::class, 'home'])->name('home');
 Route::get('/template/{id?}', [PublicacionesController::class, 'template'])->name('template');
 Route::get('/dash', [PublicacionesController::class, 'getMostrarUsers'])->name('dash');
 Route::post('/regitrar', [RegisterController::class, 'create'])->name('create');
@@ -27,5 +28,4 @@ Route::post('/regitrarcliente', [RegisterUserController::class, 'agregarcliente'
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/print_chart', [PDFController::class, 'print'])->name('print_chart');

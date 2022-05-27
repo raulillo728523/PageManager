@@ -17,12 +17,18 @@ class PublicacionesController extends Controller
 
     public function cargar(Request $request){
         
-
-        if (rol('agregarusuario')){
+        
+        if(rol('agregarcliente')){
+            $template = User::where('id','=', rolname())->get();
+            return view('auth/templatedit', ['Vista'=>$template]);
+        }
+        if(rol('administrador')){
             $registros = User::where('rol','=', 'agregarcliente')->get();
             return view('welcome',['Registros'=>$registros]);
-        }else{
-            return viwe('template');
+        }
+        if (rol('agregarusuario') || rol('agregarcliente') || rol('administrador')){
+            $registros = User::where('rol','=', 'agregarcliente')->get();
+            return view('welcome',['Registros'=>$registros]);
         }
         // $busqueda = 'Michoacan';
         // $count = Publicaciones::count('id');
@@ -32,6 +38,12 @@ class PublicacionesController extends Controller
         // return response()->json($registros, 200);
         // 
               
+    }
+
+    function home()
+    {
+        $registros = User::where('rol','=', 'agregarcliente')->get();
+        return view('welcome',['Registros'=>$registros]);
     }
 
     function getMostrarUsers()
