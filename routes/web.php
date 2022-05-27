@@ -19,7 +19,7 @@ use App\Http\Controllers\RegisterUserController;
 */
 
 Route::get('/', [PublicacionesController::class, 'cargar'])->name('dashboard');
-Route::get('/template', [PublicacionesController::class, 'template'])->name('template');
+Route::get('/template/{id?}', [PublicacionesController::class, 'template'])->name('template');
 Route::get('/dash', [PublicacionesController::class, 'getMostrarUsers'])->name('dash');
 Route::post('/regitrar', [RegisterController::class, 'create'])->name('create');
 Route::post('/regitrarusuario', [RegisterUserController::class, 'agregarusuario'])->name('agregarusuario');

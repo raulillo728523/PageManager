@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Publicaciones;
+use App\Models\User;
+use App\Http\Controllers\Auth;
+
 
 class PublicacionesController extends Controller
 {
@@ -14,7 +16,14 @@ class PublicacionesController extends Controller
     }
 
     public function cargar(Request $request){
-        // $registros = Publicaciones::all();
+        
+
+        if (rol('agregarusuario')){
+            $registros = User::where('rol','=', 'agregarcliente')->get();
+            return view('welcome',['Registros'=>$registros]);
+        }else{
+            return viwe('template');
+        }
         // $busqueda = 'Michoacan';
         // $count = Publicaciones::count('id');
         // $count_today = Publicaciones::where('fecha', '=', 'curdate()')->count();
@@ -22,16 +31,17 @@ class PublicacionesController extends Controller
         // dd($count_grafica);
         // return response()->json($registros, 200);
         // 
-        return view('welcome');      
+              
     }
-    
+
     function getMostrarUsers()
     {
         $registros = Publicaciones::all();
         return response()->json($registros, 200);
     }
 
-    public function template(Request $request){
-        return view('auth/template');      
+    public function template(Request $request, $id){
+        $template = User::where('id','=', $id)->get();
+        return view('auth/template', ['Vista'=>$template]);      
     }
 }

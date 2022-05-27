@@ -45,7 +45,11 @@
                 <a class="nav-link" href="#">Naturista</a>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="javascript:void();" type="submit" onclick="document.getElementById('my_form').submit();">Cerrar Sesion</a></li>
+            <li class="nav-item">
+              
+              <a class="nav-link">Bienvenido {{ Auth::user()->name }}</a>
+              
+              <a class="nav-link" href="javascript:void();" type="submit" onclick="document.getElementById('my_form').submit();">Cerrar Sesion</a></li>
             <form method="POST" action="{{ route('logout') }}" id="my_form">
                 @csrf
                 <!-- <button type="submit" class="nav-item"
@@ -90,6 +94,7 @@
       !-->
       <section class="section bg-gray">
         <div class="container">
+          @foreach ($Registros as $registro)
 
           <div class="card mb-30">
             <div class="row align-items-center h-full">
@@ -99,36 +104,15 @@
 
               <div class="col-12 col-md-8">
                 <div class="card-block">
-                  <h4 class="card-title">Naturiza</h4>
-                  <p class="card-text">Un espacio al aire libre con todos los accesorios disponibles para que puedas hacer todo el ejercicio que tu quieras a tu comodidad.</p>
-                  <a class="fw-600 fs-12" href="#">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
+                  <h4 class="card-title">{{$registro->name}}</h4>
+                  <p class="card-text">{{$registro->description}}</p>
+                  <a class="fw-600 fs-12" href="{{route('template',$registro->id)}}">Página<i class="fa fa-chevron-right fs-9 pl-8"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-
-          <div class="card mb-30">
-            <div class="row align-items-center h-full">
-              <div class="col-12 col-md-4">
-                <a><img src="{{asset('resources/assets/img/blog-2.jpg')}}" alt="..."></a>
-              </div>
-
-              <div class="col-12 col-md-8">
-                <div class="card-block">
-                  <h4 class="card-title">Playa Azul</h4>
-                  <p class="card-text">Playa Michoacana que te ofrece la mejor comida y estancia.</p>
-                  <a class="fw-600 fs-12" href="#">Página <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <nav class="flexbox mt-30">
-            <a class="btn btn-white disabled"><i class="ti-arrow-left fs-9 mr-4"></i> Nuevo</a>
-            <a class="btn btn-white" href="#">Antiguo <i class="ti-arrow-right fs-9 ml-4"></i></a>
-          </nav>
-
+          @endforeach
 
         </div>
       </section>
