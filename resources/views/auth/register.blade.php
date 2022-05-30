@@ -24,10 +24,10 @@
       <h5 class="text-uppercase text-center">Registro</h5>
       <ul class="nav mb-3 align-items-center d-flex flex-row justify-content-center alig-items-center" id="pills-tab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-user" role="tab" aria-controls="pills-home" aria-selected="true">Registro Usuario</a>
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-user" role="tab" aria-controls="pills-home" aria-selected="true">Visitante</a>
         </li>
         <li class="nav-item" style="margin-left: 38px;" >
-          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-client" role="tab" aria-controls="pills-profile" aria-selected="false">Registro Cliente</a>
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-client" role="tab" aria-controls="pills-profile" aria-selected="false">Empresa</a>
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">

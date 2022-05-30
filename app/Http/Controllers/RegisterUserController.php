@@ -56,5 +56,35 @@ class RegisterUserController extends Controller
         
              return view('auth.login');
     }
+
+    public function edit(Request $request){
+        
+        $requestt = User::findOrFail(rolename());
+
+        dd($requestt);
+
+            $requestt->name = $request->name;
+            $requestt->email = $request->email;
+            $requestt->username = $request->username;
+            $requestt->rol = $request->rol;
+            $requestt->password = $request->password;
+            $requestt->city = $request->city;
+            $requestt->address = $request->address;
+            $requestt->telephone = $request->telephone;
+            $requestt->description = $request->description;
+            $requestt->service1 = $request->service1;
+            $requestt->service2 = $request->service2;
+            $requestt->service3 = $request->service3;
+            $requestt->service4 = $request->service4;
+            $requestt->service5 = $request->service5;
+            $requestt->service6 = $request->service6;
+            $requestt->history = $request->history;
+            $requestt->img = $request->img;
+            $requestt->type = $request->type;
+            
+        $requestt->save();
+
+        
+    }
     
 }

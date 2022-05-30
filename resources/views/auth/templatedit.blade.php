@@ -61,7 +61,7 @@
             <hr class="w-50 ">
 
             <!-- <a class="btn btn-xl btn-round btn-white w-200" href="#" data-scrollto="section-apply">Contacto</a> -->
-            <a class="btn btn-xl btn-round btn-white w-200" href="#" data-scrollto="section-apply">Servicios</a>
+            
 
           </div>
         </div>
@@ -85,43 +85,55 @@
       |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
       !-->
       <section class="section bg-gray" id="section-apply">
-        <div class="container">
+        <div class="container" >
+            <form method="POST" action="{{ route('edit') }}" >
+            @csrf
+            <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 tab-pane">
+                <h5>Descripcion</h5>
 
-          <div class="row">
-            <div class="col-12 col-md-8 offset-md-2">
-
-              <p class="lead">{{$template->description}}</p>
+                <textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->description}}</textarea>
+                
 
               <br><br>
               
               <h5>Servicios</h5>
+              
+              
               <ul>
-                @if ($template->service1 != '')
-                <li>{{$template->service1}}</li>
-                @endif
-                @if ($template->service2 != '')
-                <li>{{$template->service2}}</li>
-                @endif
-                @if ($template->service3 != '')
-                <li>{{$template->service3}}</li>
-                @endif
-                @if ($template->service4 != '')
-                <li>{{$template->service4}}</li>
-                @endif
-                @if ($template->service5 != '')
-                <li>{{$template->service5}}</li>
-                @endif
-                @if ($template->service6 != '')
-                <li>{{$template->service6}}</li>
-                @endif
+                
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service1}}</textarea>
+                </li>
+                
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service2}}</textarea>
+                </li>
+                
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service3}}</textarea>
+                </li>
+               
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service4}}</textarea>
+                </li>
+                
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service5}}</textarea>
+                </li>
+                
+                <li><textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->service6}}</textarea>
+                </li>
+               
               </ul>
 
               <br><br>
 
               <h5>Historia</h5>
-              <p class="lead"><li>{{$template->history}}</li></p>
+              <textarea type="text" id="description" name="description" style="height: 120px; width: 700px;" class="form-control lead">{{$template->history}}</textarea>
+                
 
+
+              <button type="submit" class="btn btn-warning">Guardar cambios</button>
             </div>
+            
+            </form>
+          
           </div>
 
 

@@ -25,6 +25,7 @@ Route::get('/dash', [PublicacionesController::class, 'getMostrarUsers'])->name('
 Route::post('/regitrar', [RegisterController::class, 'create'])->name('create');
 Route::post('/regitrarusuario', [RegisterUserController::class, 'agregarusuario'])->name('agregarusuario');
 Route::post('/regitrarcliente', [RegisterUserController::class, 'agregarcliente'])->name('agregarcliente');
+Route::post('/edit', [RegisterUserController::class, 'edit'])->name('edit');
 
 Auth::routes();
 
