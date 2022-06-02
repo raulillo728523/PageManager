@@ -137,14 +137,6 @@
               </li>
             </ul>
           </div>
-
-          <div class="col-12 col-lg-3">
-            <div class="social text-center text-lg-right">
-              <a class="social-facebook" href="https://www.facebook.com/ruls.espinito"><i class="fa fa-facebook"></i></a>
-              <a class="social-twitter" href="https://twitter.com/ruls7285"><i class="fa fa-twitter"></i></a>
-              <a class="social-instagram" href="https://www.instagram.com/raul.espinoc/"><i class="fa fa-instagram"></i></a>
-            </div>
-          </div>
         </div>
       </div>
     </footer>

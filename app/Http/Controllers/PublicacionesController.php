@@ -30,13 +30,7 @@ class PublicacionesController extends Controller
             $registros = User::where('rol','=', 'agregarcliente')->get();
             return view('welcome',['Registros'=>$registros]);
         }
-        // $busqueda = 'Michoacan';
-        // $count = Publicaciones::count('id');
-        // $count_today = Publicaciones::where('fecha', '=', 'curdate()')->count();
-        // $count_grafica = Publicaciones::groupBy('lugar_extraccion')->selectRaw('lugar_extraccion, count(*) as total')->get();
-        // dd($count_grafica);
-        // return response()->json($registros, 200);
-        // 
+    
               
     }
 
